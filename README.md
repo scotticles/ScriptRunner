@@ -11,7 +11,9 @@
         -pTitle < message|Backup script > on host failed!
         -pDisable 1 Will turn off pushover if set to 1
 
-./backup -b /bin/bash -s /opt/backup.sh -pToken 2234dsafaf23 -pUserToken 3234dsafaf23 -pTitle The clean up script
+./backup -b /bin/bash -s /opt/backup.sh \
+         -pToken 2234dsafaf23 -pUserToken 3234dsafaf23 \
+         -pTitle The clean up script
 ```
 
 This will run backup.sh and if it fails it will put the error message into the pushover message and send it. The Title is half hardcoded because I wanted the hostname to be put in the title so "on $host failed!" is what will be in the title.
